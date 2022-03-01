@@ -30,9 +30,12 @@
           required
           #subscription="ngModel"
         >
-          <option value="basic">basic</option>
-          <option value="advanced">advanced</option>
-          <option value="pro">pro</option>
+          <option
+            *ngFor="let subscription of subscriptions"
+            [value]="subscription"
+          >
+            {{ subscription }}
+          </option>
         </select>
         <span *ngIf="!subscription.valid && subscription.touched"
           >Please select subscription</span

@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 export class AppComponent {
   title = 'td-form-app';
   submitted: boolean = false;
-
+  subscriptions = ['basic', 'advanced', 'pro'];
   @ViewChild('f') formData: NgForm;
   userData = {
     mail: '',
